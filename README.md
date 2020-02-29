@@ -1,5 +1,5 @@
 # Tara-National-Park-Website
-School projects for JavaScript course
+School project for JavaScript course
 
 A list of technologies:
 - Bootstrap
