@@ -4,5 +4,6 @@
 A list of technologies:
 - Bootstrap
 - JavaScript
-- Ajax
+- AJAX
+- JSON
 - jQuery
