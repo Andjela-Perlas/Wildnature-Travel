@@ -797,6 +797,7 @@ textarea {
     margin-right: 25px;
 }
 .sort-name,
+.sort-name-z,
 .sort-price,
 .sort-price2 {
     width: 12%;
