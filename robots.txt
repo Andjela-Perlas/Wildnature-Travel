@@ -3,4 +3,4 @@ Disallow:
 
 User-agent: *
 Disallow: kontakt.html
-Disallow: o_autoru.html
+Disallow:galerija.html
