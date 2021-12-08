@@ -38,6 +38,8 @@ function Validate() {
 
  var regUserName = /^[A-ZČĆŽŠĐ][a-zčćžšđ\.\_\-\d\W]{2,15}$/;
  var regEmail = /^[\w]+[\.\_\-\w\d]*\@[\w]+([\.][\w]+)+$/;
+ var regPassword = /^[A-ZČĆŽŠĐa-zčćžšđ\.\_\-\d\W]{2,15}$/;
+ var regPasswordConf = /^[a-zčćžšđ\.\_\-\d\W\t]{2,15}$/;
  
  
    if(!regUserName.test(userName)) {
