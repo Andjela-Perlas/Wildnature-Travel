@@ -22,6 +22,8 @@
 
 
 /*----------------REGISTRATION FORM VALIDATION---------------*/
+
+
   var userName, email, password, passwordConfirm;
  
 
@@ -34,7 +36,7 @@ function Validate() {
 
 
 
-//REGULAR EXPRESION
+//REGULAR EXPRESSION
 
  var regUserName = /^[A-ZČĆŽŠĐ][a-zčćžšđ\.\_\-\d\W]{2,15}$/;
  var regEmail = /^[\w]+[\.\_\-\w\d]*\@[\w]+([\.][\w]+)+$/;
@@ -49,6 +51,7 @@ function Validate() {
      document.getElementById('userNameError').style.color = "";
      document.getElementById('userNameError').innerHTML = "";
    }
+ 
   
    if(!regEmail.test(email)) {
      document.getElementById('emailErrorReg').style.color = "#ff0000";
@@ -57,6 +60,7 @@ function Validate() {
      document.getElementById('emailErrorReg').style.color = "";
      document.getElementById('emailErrorReg').innerHTML = ""; 
    }
+ 
   
    if(!regPassword.test(password)) {
       document.getElementById('passwordError').style.color = "#ff0000";
@@ -65,6 +69,7 @@ function Validate() {
       document.getElementById('passwordError').style.color = "";
       document.getElementById('passwordError').innerHTML = "";
     }
+ 
 
    if(!regPasswordConf.test(passwordConfirm)) {
       document.getElementById('passwordErrorConf').style.color = "#ff0000";
@@ -74,6 +79,7 @@ function Validate() {
      document.getElementById('passwordErrorConf').innerHTML = "";
   }
 }
+
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -94,6 +100,7 @@ function Validate() {
  }
 
 
+
   function verifyEmailReg() {
     email = document.getElementById('emailReg');
     if (email.value == "") {
@@ -109,6 +116,7 @@ function Validate() {
  }
 
 
+
    function verifyPassword() {
     password = document.getElementById('passwordReg');
     if (password.value == "") {
@@ -121,6 +129,8 @@ function Validate() {
       document.getElementById('passwordError').innerHTML = "";
    }
  }
+
+
 
    function verifyPasswordConfirm() {
     password = document.getElementById('passwordReg');
@@ -138,8 +148,6 @@ function Validate() {
       document.getElementById('passwordErrorConf').innerHTML = "";
    }
  }
-
-
 
 
 
@@ -226,7 +234,7 @@ $.ajax({
 
 function sortDestination(data) {
  
-  //sortiranje a-z
+  //sort a-z
     $('.sort-name').click(function(e){
       e.preventDefault();
       var destinations =$('.destinations');
@@ -242,7 +250,7 @@ function sortDestination(data) {
  
  
  
-  //sortiranje z-a
+  //sort z-a
    $('.sort-name-z').click(function(e){
     e.preventDefault();
     var destinations =$('.destinations');
@@ -258,7 +266,7 @@ function sortDestination(data) {
  
 
 
-//sortiranje-opadajuca cena
+//sort - descending price
 
   $('.sort-price').click(function(e){
     e.preventDefault();
@@ -275,7 +283,7 @@ function sortDestination(data) {
 
  
 
-//sortiranje-rastuca cena
+//sort - ascending price
 $('.sort-price2').click(function(e){
     e.preventDefault();
      var destinations=$('.destinations');
@@ -311,5 +319,4 @@ var row = "";
  }); 
 
 $('.destination').append(row);
-
 }
