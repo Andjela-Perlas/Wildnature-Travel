@@ -208,7 +208,6 @@ function slideShow() {
 
 
 
-
 /*--------------------AJAX---------------------------*/
 
 $.ajax({
@@ -221,7 +220,8 @@ $.ajax({
       error: function(error) {
         console.log(error);
       }
-  });
+  })
+
 
 
 function sortDestination(data) {
@@ -239,6 +239,23 @@ function sortDestination(data) {
       });
       $('.destination').append(destinations);
   });
+ 
+ 
+ 
+  //sortiranje z-a
+   $('.sort-name-z').click(function(e){
+    e.preventDefault();
+    var destinations =$('.destinations');
+    destinations.sort(function(a,b){
+     a=$(a).find('.title').text();
+     b=$(b).find('.title').text();
+      if(b > a){return 1;}
+      else if(b < a){return -1;}
+      else{return 0;}
+    });
+    $('.destination').append(destinations);
+});
+ 
 
 
 //sortiranje-opadajuca cena
@@ -256,6 +273,7 @@ function sortDestination(data) {
     $('.destination').append(destinations);
   });
 
+ 
 
 //sortiranje-rastuca cena
 $('.sort-price2').click(function(e){
@@ -271,10 +289,10 @@ $('.sort-price2').click(function(e){
      $('.destination').append(destinations);
    });
 
-  showDestinations(data);
-  
+  showDestinations(data); 
 }
   
+
 
 function showDestinations(data) {
 
@@ -295,20 +313,3 @@ var row = "";
 $('.destination').append(row);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
